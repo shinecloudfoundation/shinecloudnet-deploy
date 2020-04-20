@@ -46,7 +46,7 @@ chmod +x scloud-validator-daemon
 
 sed -i -e "s@{{WORKDIR}}@$curDir@g" scloud-validator-daemon
 sed -i -e "s@{{VERSION}}@$version@g" scloud-validator-daemon
-sed -i -e "s@{{scloud_HOME}}@$nodeHome@g" scloud-validator-daemon
+sed -i -e "s@{{SCLOUD_HOME}}@$nodeHome@g" scloud-validator-daemon
 sed -i -e "s@{{USER_NAME}}@$username@g" scloud-validator-daemon
 sed -i -e "s@{{USER_GROUP}}@$username@g" scloud-validator-daemon
 
