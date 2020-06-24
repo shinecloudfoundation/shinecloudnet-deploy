@@ -75,7 +75,7 @@ sed -i -e "s/persistent_peers = \"\"/persistent_peers = \"$persistent_peers\"/g"
 sed -i -e "s/timeout_commit = \"1s\"/timeout_commit = \"5s\"/g" $nodeHome/config/config.toml
 
 # Deny inbond peer connection
-sed -i -e "s/0.0.0.0:26656/127.0.0.1:26656/g" $nodeHome/config/config.toml
+#sed -i -e "s/0.0.0.0:26656/127.0.0.1:26656/g" $nodeHome/config/config.toml
 
 sudo systemctl daemon-reload
 
