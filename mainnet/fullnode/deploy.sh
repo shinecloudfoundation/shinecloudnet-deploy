@@ -33,8 +33,8 @@ configUrl=https://raw.githubusercontent.com/shinecloudfoundation/shinecloudnet-b
 
 mkdir bin/$version -p
 
-wget $configUrl/$networkType/binary/scloud -O bin/$version/scloud
-wget $configUrl/$networkType/binary/scloudcli -O bin/$version/scloudcli
+wget $configUrl/$networkType/binary/$version/scloud -O bin/$version/scloud
+wget $configUrl/$networkType/binary/$version/scloudcli -O bin/$version/scloudcli
 wget $configUrl/$networkType/genesis.json -O genesis.json
 wget $configUrl/$networkType/networkConfig.json -O networkConfig.json
 wget $configUrl/$networkType/scloud-validator-daemon -O scloud-validator-daemon
@@ -74,6 +74,7 @@ sed -i -e "s/127.0.0.1:26657/0.0.0.0:26657/g" $nodeHome/config/config.toml
 sed -i -e "s/persistent_peers = \"\"/persistent_peers = \"$persistent_peers\"/g" $nodeHome/config/config.toml
 sed -i -e "s/index_all_tags = false/index_all_tags = true/g" $nodeHome/config/config.toml
 sed -i -e "s/timeout_commit = \"1s\"/timeout_commit = \"5s\"/g" $nodeHome/config/config.toml
+sed -i -e "s/log_level = \"main:info,state:info,\*:error\"/log_level = \"main:info,state:info,\*:none\"/g" $nodeHome/config/config.toml
 
 sudo systemctl daemon-reload
 

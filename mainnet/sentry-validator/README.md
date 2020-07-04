@@ -10,7 +10,7 @@ cd $HOME && wget https://raw.githubusercontent.com/shinecloudfoundation/shineclo
 Example command:
 
 ```shell
-cd $HOME && wget https://raw.githubusercontent.com/shinecloudfoundation/shinecloudnet-deploy/master/mainnet/sentry-validator/deploy-sentry.sh -O deploy-sentry.sh && sh deploy-sentry.sh myScloudNode 0.01uscds v1.0.0
+cd $HOME && wget https://raw.githubusercontent.com/shinecloudfoundation/shinecloudnet-deploy/master/mainnet/sentry-validator/deploy-sentry.sh -O deploy-sentry.sh && sh deploy-sentry.sh myScloudNode 0.01uscds v1.2.0
 ```
 
 ### Get sentry node peer info

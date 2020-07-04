@@ -74,6 +74,7 @@ sed -i -e "s/seeds = \"\"/seeds = \"$seed\"/g" $nodeHome/config/config.toml
 sed -i -e "s/persistent_peers = \"\"/persistent_peers = \"$persistent_peers\"/g" $nodeHome/config/config.toml
 sed -i -e "s/index_all_tags = false/index_all_tags = true/g" $nodeHome/config/config.toml
 sed -i -e "s/timeout_commit = \"1s\"/timeout_commit = \"5s\"/g" $nodeHome/config/config.toml
+sed -i -e "s/log_level = \"main:info,state:info,\*:error\"/log_level = \"main:info,state:info,\*:none\"/g" $nodeHome/config/config.toml
 
 # Enable remote access to node rpc
 sed -i -e "s/127.0.0.1:26657/0.0.0.0:26657/g" $nodeHome/config/config.toml
